@@ -192,8 +192,9 @@ class Blip2LLama(Blip2Base):
             else:
                 prompt = self.prompt
 
-            prompt = [prompt] * image.size(0)
+            prompt = [prompt] * image.size(0) #size (batch_size, prompt_len)
 
+            #automaticlly add bos
             llama_tokens = self.llama_tokenizer(
                 prompt,
                 return_tensors="pt",
