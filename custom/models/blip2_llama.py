@@ -85,11 +85,14 @@ class Blip2LLama(Blip2Base):
     def forward(self, samples):
         image = samples["image"]
         with self.maybe_autocast():
+            # output size: (Batch_Size, Num_Patches + 1, Hidden_Size)
             image_embeds = self.ln_vision(self.visual_encoder(image))
+        #size is (Batch_Size, Num_Patches + 1), all is 1
         image_atts = torch.ones(image_embeds.size()[:-1], dtype=torch.long).to(
             image.device
         )
-
+         
+        # query_tokens size is (Batch_Size, Num_Query_Tokens, Hidden_Size), broadcast to (Batch_Size, Num_Patches + 1, Hidden_Size)
         query_tokens = self.query_tokens.expand(image_embeds.shape[0], -1, -1)
         query_output = self.Qformer.bert(
             query_embeds=query_tokens,
@@ -99,12 +102,15 @@ class Blip2LLama(Blip2Base):
         )
 
         inputs_llama = self.llama_proj(query_output.last_hidden_state)
+        #size is (Batch_Size, Num_Query_Tokens), all is 1
         atts_llama = torch.ones(inputs_llama.size()[:-1], dtype=torch.long).to(image.device)
 
+        #right padding
         self.llama_tokenizer.padding_side = "right"
 
-        text = [t + "\n" for t in samples["text_input"]]
+        text = [t + self.llama_tokenizer.eos_token for t in samples["text_input"]]
 
+        #automatically add bos token to the beginning of the text
         llama_tokens = self.llama_tokenizer(
             text,
             return_tensors="pt",
@@ -113,12 +119,17 @@ class Blip2LLama(Blip2Base):
             max_length=self.max_txt_len,
         ).to(image.device)
 
+        #targets = llama_tokens.input_ids.masked_fill(
+        #    llama_tokens.input_ids == self.llama_tokenizer.pad_token_id, -100
+        #)
+        # 使用 attention_mask：为 1 的保留原值，为 0 的设为 -100
         targets = llama_tokens.input_ids.masked_fill(
-            llama_tokens.input_ids == self.llama_tokenizer.pad_token_id, -100
+            llama_tokens.attention_mask == 0, -100
         )
         if self.prompt:
             targets[:, : self.prompt_length] = -100  # do not apply loss to the prompt
 
+        #do not apply loss to the query tokens
         empty_targets = (
             torch.ones(atts_llama.size(), dtype=torch.long).to(image.device).fill_(-100)
         )
@@ -192,9 +203,8 @@ class Blip2LLama(Blip2Base):
             else:
                 prompt = self.prompt
 
-            prompt = [prompt] * image.size(0) #size (batch_size, prompt_len)
+            prompt = [prompt] * image.size(0)
 
-            #automaticlly add bos
             llama_tokens = self.llama_tokenizer(
                 prompt,
                 return_tensors="pt",
