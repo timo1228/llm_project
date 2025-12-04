@@ -113,8 +113,8 @@ if __name__ == "__main__":
     )
     # model.enable_input_require_grads()  # 开启梯度检查点时，要执行该方法
 
-    train_ds = Dataset.from_json(args.train_dataset_path)
-    train_dataset = train_ds.map(process_func)
+    train_ds = Dataset.from_json(args.train_dataset_path) # dataset对象，类似于List[dict]结构
+    train_dataset = train_ds.map(process_func) # 对dataset中的每个元素应用process_func函数，返回一个新的dataset对象
 
     # 配置LoRA
     config = LoraConfig(
@@ -144,14 +144,24 @@ if __name__ == "__main__":
         # gradient_checkpointing=True,
         report_to="none",
         bf16=True,
+        #optim="adamw_torch",      # 或 "sgd", "adafactor"
+        #lr_scheduler_type="cosine", # 或 "linear", "constant", "cosine_with_restarts"
     )
 
     # 配置Trainer
+    """
+            DataCollatorForSeq2Seq的动态填充 (Dynamic Padding)：
+            找出这 8 个样本中最长的那个（假设是 200）。
+            把其他 7 个样本的 input_ids 用 pad_token_id 补齐到 200。
+            把 labels 用 -100 补齐到 200（-100 是 PyTorch CrossEntropyLoss 默认忽略的索引）。
+            把 attention_mask 用 0 补齐到 200。
+    """
     trainer = Trainer(
         model=peft_model,
         args=args,
         train_dataset=train_dataset,
         data_collator=DataCollatorForSeq2Seq(tokenizer=tokenizer, padding=True),
+        #optimizers=(optimizer, lr_scheduler)  # 手动指定自定义优化器和学习率调度器
     )
 
     peft_model, trainer = accelerator.prepare(peft_model, trainer)
