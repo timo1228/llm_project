@@ -57,6 +57,7 @@ class RunnerBase:
         self._device = None
         self._optimizer = None
         self._scaler = None
+        #這裏debug打斷點時，查看dataloader屬性調用self.dataloader,導致self.datasets出問題，報錯
         self._dataloaders = None
         self._lr_sched = None
 
@@ -419,7 +420,9 @@ class RunnerBase:
             if self.save_freq>0 and cur_epoch%self.save_freq == 0:
                 self._save_checkpoint(cur_epoch, is_best=False)
 
-            dist.barrier()
+            #只有在分佈式情況下才調用dist.barrier()
+            if dist.is_available() and dist.is_initialized():
+                dist.barrier()
 
         # save last checkpoint
         if self.save_last and not self.evaluate_only:
@@ -586,6 +589,7 @@ class RunnerBase:
     def _save_checkpoint(self, cur_epoch, is_best=False):
         """
         Save the checkpoint at the current epoch.
+        只保存模型中参与训练（requires_grad=True）的参数权重，以及优化器状态、配置和当前轮数。
         """
         model_no_ddp = self.unwrap_dist_model(self.model)
         param_grad_dic = {
@@ -596,6 +600,11 @@ class RunnerBase:
             if k in param_grad_dic.keys() and not param_grad_dic[k]:
                 # delete parameters that do not require gradient
                 del state_dict[k]
+        # 额外处理：lm_head 是 embed_tokens 的共享别名，不在 named_parameters 里
+        if "llama_model.lm_head.weight" in state_dict:
+            if hasattr(model_no_ddp, "llama_model") and hasattr(model_no_ddp.llama_model, "lm_head"):
+                if not model_no_ddp.llama_model.lm_head.weight.requires_grad:
+                    del state_dict["llama_model.lm_head.weight"]
 
         save_obj = {
             "model": state_dict,
@@ -646,7 +655,10 @@ class RunnerBase:
             raise RuntimeError("checkpoint url or path is invalid")
 
         state_dict = checkpoint["model"]
-        self.unwrap_dist_model(self.model).load_state_dict(state_dict)
+        #state_dict 只包含部分weights,是訓練時require_grad=True的部分
+        msg = self.unwrap_dist_model(self.model).load_state_dict(state_dict, strict=False)
+        logging.info("Missing keys: {}".format(msg.missing_keys))
+        logging.info("Unexpected keys: {}".format(msg.unexpected_keys))
 
         self.optimizer.load_state_dict(checkpoint["optimizer"])
         if self.scaler and "scaler" in checkpoint:

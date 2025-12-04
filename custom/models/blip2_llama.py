@@ -66,8 +66,16 @@ class Blip2LLama(Blip2Base):
         self.llama_model = AutoModelForCausalLM.from_pretrained(
             llama_model, torch_dtype=torch.float16
         )
+        # 1. 常规冻结所有参数
         for name, param in self.llama_model.named_parameters():
             param.requires_grad = False
+        # 2. 强制冻结 lm_head (应对权重绑定或循环遗漏的情况)
+        if hasattr(self.llama_model, "lm_head"):
+            self.llama_model.lm_head.weight.requires_grad = False
+        # 3. 如果有 embed_tokens，也确保冻结 (通常与 lm_head 绑定)。由於兩者共享權重，所以不會都出現在named_parameters裏面
+        if hasattr(self.llama_model, "model") and hasattr(self.llama_model.model, "embed_tokens"):
+            self.llama_model.model.embed_tokens.weight.requires_grad = False
+
         self.eos_token_id = self.llama_tokenizer.eos_token_id
 
         self.llama_proj = nn.Linear(
@@ -235,34 +243,6 @@ class Blip2LLama(Blip2Base):
             output_text = self.llama_tokenizer.batch_decode(
                 outputs, skip_special_tokens=True
             )
-                            
-            # previous version for transformers<4.27
-            # if use_nucleus_sampling:
-            #     query_embeds = inputs_llama.repeat_interleave(num_captions, dim=0)
-            #     num_beams = 1
-            # else:
-            #     query_embeds = inputs_llama.repeat_interleave(num_beams, dim=0)
-
-            # outputs = self.llama_model.generate(
-            #     input_ids=input_ids,
-            #     query_embeds=query_embeds,
-            #     attention_mask=attention_mask,
-            #     do_sample=use_nucleus_sampling,
-            #     top_p=top_p,
-            #     temperature=temperature,
-            #     num_beams=num_beams,
-            #     max_new_tokens=max_length,
-            #     min_length=min_length,
-            #     eos_token_id=self.eos_token_id,
-            #     repetition_penalty=repetition_penalty,
-            #     length_penalty=length_penalty,
-            #     num_return_sequences=num_captions,
-            # )
-
-            # prompt_length = llama_tokens.input_ids.shape[1]
-            # output_text = self.llama_tokenizer.batch_decode(
-            #     outputs[:, prompt_length:], skip_special_tokens=True
-            # )
             
             output_text = [text.strip() for text in output_text]
             return output_text
