@@ -45,17 +45,19 @@ def predict(messages, model):
 if __name__ == "__main__":
     # # 在modelscope上下载Qwen2.5-VL模型到本地目录下
     # model_dir = snapshot_download("Qwen/Qwen2.5-VL-7B-Instruct", cache_dir="./", revision="master")
-    model_path = "./Qwen2.5-VL-7B-Instruct"
+    cache_dir = "D:/cache/huggingface"
+    model_path = "Qwen/Qwen2.5-VL-7B-Instruct"
 
     # 使用Transformers加载模型权重
-    tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=False, trust_remote_code=True)
-    processor = AutoProcessor.from_pretrained(model_path)
+    tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=False, trust_remote_code=True, cache_dir=cache_dir+"/models")
+    processor = AutoProcessor.from_pretrained(model_path, cache_dir=cache_dir+"/models")
 
     # 加载 Qwen2.5-VL-7B-Instruct
     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
         model_path,
         torch_dtype="auto",
         device_map="auto",
+        cache_dir=cache_dir + "/models"
     )
 
     # ====================测试模式===================
@@ -71,10 +73,10 @@ if __name__ == "__main__":
     )
 
     # 获取测试模型
-    val_peft_model = PeftModel.from_pretrained(model, model_id="./output/Qwen2.5-VL-7B/checkpoint-56", config=val_config)
+    val_peft_model = PeftModel.from_pretrained(model, model_id="./output/Qwen2.5-VL-7B-accel/checkpoint-60", config=val_config)
 
     # 读取测试数据
-    with open("coco_2014/data_vl_test.json", "r") as f:
+    with open("./data/coco_2014/data_vl_test.json", "r") as f:
         test_dataset = json.load(f)
 
     test_image_list = []
@@ -92,7 +94,7 @@ if __name__ == "__main__":
                 },
                 {
                 "type": "text",
-                "text": "COCO Yes:"
+                "text": "Please describe the image as detailed as possible, using more than 1 sentence:"
                 }
             ]}]
         

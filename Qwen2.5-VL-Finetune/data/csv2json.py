@@ -12,7 +12,7 @@ for i in range(len(df)):
         "conversations": [
             {
                 "from": "user",
-                "value": f"COCO Yes: <|vision_start|>{df.iloc[i]['image_path']}<|vision_end|>"
+                "value": f"<|vision_start|>{df.iloc[i]['image_path']}<|vision_end|>COCO Yes: "
             },
             {
                 "from": "assistant", 

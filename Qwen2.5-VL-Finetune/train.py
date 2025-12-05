@@ -1,5 +1,6 @@
 import argparse
 import torch
+import sys
 from datasets import Dataset
 from modelscope import snapshot_download, AutoTokenizer
 from swanlab.integration.transformers import SwanLabCallback
@@ -32,7 +33,7 @@ def process_func(example):
     messages = [
         {
             "role": "user",
-            "content": [
+            "content": [ #content先後順序決定圖片位置
                 {
                     "type": "image",
                     "image": f"{file_path}",
@@ -84,6 +85,22 @@ def process_func(example):
 
 
 if __name__ == "__main__":
+    # 模拟命令行参数，方便IDE调试或直接运行
+    sys.argv = [
+        "train.py",
+        "--pretrained_model", "Qwen/Qwen2.5-VL-7B-Instruct",
+        "--train_dataset_path", "./data/coco_2014/data_vl_train.json",
+        "--batch_size", "4",  # 单卡建议改小，原8可能会OOM
+        "--gradient_accumulation_steps", "8", # 保持总batch=32
+        "--epochs", "4",
+        "--learning_rate", "1e-4",
+        "--lora_rank", "64",
+        "--lora_alpha", "16",
+        "--lora_dropout", "0.05",
+        "--output_dir", "./output/Qwen2.5-VL-7B-accel",
+        "--cache_dir", "D:/cache/huggingface"
+    ]
+
     parser = argparse.ArgumentParser(description='argparse')
     parser.add_argument("--pretrained_model", type=str, default="Qwen/Qwen2.5-VL-7B-Instruct", help="Pretrained model to use.")
     parser.add_argument("--train_dataset_path", type=str, default="coco_2014/data_vl_train.json", help="Train dataset.")
@@ -100,20 +117,22 @@ if __name__ == "__main__":
         default="output/Qwen2.5-VL-7B-accel",
         help="The output directory where the model predictions and checkpoints will be written."
     )
+    parser.add_argument("--cache_dir", type=str, default="D:/cache/huggingface", help="Cache directory for models and datasets.")
     args = parser.parse_args()
 
     # Load tokenizer and processor
-    tokenizer = AutoTokenizer.from_pretrained(args.pretrained_model, trust_remote_code=True)
-    processor = AutoProcessor.from_pretrained(args.pretrained_model)
+    tokenizer = AutoTokenizer.from_pretrained(args.pretrained_model, trust_remote_code=True, cache_dir=f"{args.cache_dir}/models")
+    processor = AutoProcessor.from_pretrained(args.pretrained_model, cache_dir=f"{args.cache_dir}/models")
 
     # Load pretrained model
     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
         args.pretrained_model,
         torch_dtype=torch.bfloat16,
+        cache_dir=f"{args.cache_dir}/models",
     )
     # model.enable_input_require_grads()  # 开启梯度检查点时，要执行该方法
 
-    train_ds = Dataset.from_json(args.train_dataset_path) # dataset对象，类似于List[dict]结构
+    train_ds = Dataset.from_json(args.train_dataset_path, cache_dir=f"{args.cache_dir}/datasets") # dataset对象，类似于List[dict]结构
     train_dataset = train_ds.map(process_func) # 对dataset中的每个元素应用process_func函数，返回一个新的dataset对象
 
     # 配置LoRA
@@ -130,20 +149,22 @@ if __name__ == "__main__":
     # 获取LoRA模型
     peft_model = get_peft_model(model, config)
 
-    # 配置训练参数
+    # 配置训练参数，每個batch是一個step
     args = TrainingArguments(
         output_dir=args.output_dir,
         per_device_train_batch_size=args.batch_size,
         gradient_accumulation_steps=args.gradient_accumulation_steps,
-        logging_steps=10,
-        logging_first_step=5,
+        logging_steps=1,
+        logging_first_step=True,
         num_train_epochs=args.epochs,
-        save_steps=100,
+        save_strategy="epoch",
         learning_rate=args.learning_rate,
         save_on_each_node=True,
         # gradient_checkpointing=True,
         report_to="none",
         bf16=True,
+        dataloader_num_workers=4,   # 新增: 使用 4 個子進程並行加載數據 (根據你的CPU核數調整，通常 4-8 即可)
+        dataloader_pin_memory=True, # 新增: 鎖頁內存，加速 CPU 到 GPU 的傳輸
         #optim="adamw_torch",      # 或 "sgd", "adafactor"
         #lr_scheduler_type="cosine", # 或 "linear", "constant", "cosine_with_restarts"
     )

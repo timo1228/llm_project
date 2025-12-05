@@ -1,7 +1,5 @@
 # Qwen2.5-VL-Finetune
 
-[教程文档](https://blog.csdn.net/sinat_16020825/article/details/147163785?spm=1001.2014.3001.5501)
-
 ## 1. 环境配置
 
 1. 确保你的电脑上至少有一张英伟达显卡，并已安装好了CUDA环境。
@@ -34,7 +32,7 @@ python data/split_data.py
 Single GPU:
 
 ```bash
-CUDA_VISIBLE_DEVICES="2" accelerate launch train_with_lora_accel.py \
+CUDA_VISIBLE_DEVICES="2" accelerate launch train.py \
     --pretrained_model ./Qwen2.5-VL-7B-Instruct \
     --train_dataset_path ./coco_2014/data_vl_train.json \
     --batch_size 8 \
@@ -50,7 +48,7 @@ CUDA_VISIBLE_DEVICES="2" accelerate launch train_with_lora_accel.py \
 Multi-GPU:
 
 ```bash
-accelerate launch --num_processes=4 train_with_lora_accel.py \
+accelerate launch --num_processes=4 train.py \
     --pretrained_model ./Qwen2.5-VL-7B-Instruct \
     --train_dataset_path ./coco_2014/data_vl_train.json \
     --batch_size 8 \
