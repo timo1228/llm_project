@@ -9,6 +9,8 @@
 ```
 pip install modelscope transformers sentencepiece accelerate datasets peft swanlab qwen-vl-utils pandas
 ```
+若modelscope報錯,運行
+pip install modelscope[framework]
 
 
 ## 2. Prepare Datas

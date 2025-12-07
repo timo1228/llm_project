@@ -20,23 +20,16 @@ from accelerate import Accelerator
 
 accelerator = Accelerator()
 
-def process_func(example, processor=None, tokenizer=None):
+def process_func(example):
     """
     将数据集进行预处理
     """
-    # 確保傳入了這兩個對象，雖然理論上 fn_kwargs 會保證傳入
-    assert processor is not None, "processor is required"
-    assert tokenizer is not None, "tokenizer is required"
     MAX_LENGTH = 8192
     input_ids, attention_mask, labels = [], [], []
     conversation = example["conversations"]
     input_content = conversation[0]["value"]
     output_content = conversation[1]["value"]
-    
-    # 提取文件路徑和 Prompt
-    file_path = input_content.split("<|vision_start|>")[1].split("<|vision_end|>")[0]
-    user_prompt = input_content.split("<|vision_end|>")[1]
-
+    file_path = input_content.split("<|vision_start|>")[1].split("<|vision_end|>")[0]  # 获取图像路径
     messages = [
         {
             "role": "user",
@@ -44,11 +37,10 @@ def process_func(example, processor=None, tokenizer=None):
                 {
                     "type": "image",
                     "image": f"{file_path}",
-                    # 移除強制 resize，使用原始分辨率或模型默認處理以獲得更好細節
-                    # "resized_height": 280,
-                    # "resized_width": 280,
+                    "resized_height": 280,
+                    "resized_width": 280,
                 },
-                {"type": "text", "text": user_prompt},
+                {"type": "text", "text": "COCO Yes:"},
             ],
         }
     ]
@@ -97,21 +89,21 @@ if __name__ == "__main__":
     sys.argv = [
         "train.py",
         "--pretrained_model", "Qwen/Qwen2.5-VL-7B-Instruct",
-        "--train_dataset_path", "../data/nutrition5k_dataset/data_vl_train.json",
-        "--batch_size", "1",  # 单卡建议改小，原8可能会OOM
-        "--gradient_accumulation_steps", "16", # 保持总batch=16
+        "--train_dataset_path", "./data/coco_2014/data_vl_train.json",
+        "--batch_size", "4",  # 单卡建议改小，原8可能会OOM
+        "--gradient_accumulation_steps", "8", # 保持总batch=32
         "--epochs", "4",
         "--learning_rate", "1e-4",
-        "--lora_rank", "16",
-        "--lora_alpha", "32",
-        "--lora_dropout", "0.1",
-        "--output_dir", "./output/Qwen2.5-VL-7B-nutrition",
+        "--lora_rank", "64",
+        "--lora_alpha", "16",
+        "--lora_dropout", "0.05",
+        "--output_dir", "./output/Qwen2.5-VL-7B-accel",
         "--cache_dir", "D:/cache/huggingface"
     ]
 
     parser = argparse.ArgumentParser(description='argparse')
     parser.add_argument("--pretrained_model", type=str, default="Qwen/Qwen2.5-VL-7B-Instruct", help="Pretrained model to use.")
-    parser.add_argument("--train_dataset_path", type=str, default="../data/nutrition5k_dataset/data_vl_train.json", help="Train dataset.")
+    parser.add_argument("--train_dataset_path", type=str, default="coco_2014/data_vl_train.json", help="Train dataset.")
     parser.add_argument("--batch_size", type=int, default=8, help="Train batch size per device.")
     parser.add_argument("--gradient_accumulation_steps", type=int, default=4, help="Gradient accumulation steps.")
     parser.add_argument("--epochs", type=int, default=4, help="Train epochs.")
@@ -141,11 +133,7 @@ if __name__ == "__main__":
     # model.enable_input_require_grads()  # 开启梯度检查点时，要执行该方法
 
     train_ds = Dataset.from_json(args.train_dataset_path, cache_dir=f"{args.cache_dir}/datasets") # dataset对象，类似于List[dict]结构
-    train_dataset = train_ds.map(
-        process_func,
-        num_proc=4,
-        fn_kwargs={"processor": processor, "tokenizer": tokenizer}
-    )  # 对dataset中的每个元素应用process_func函数，返回一个新的dataset对象
+    train_dataset = train_ds.map(process_func) # 对dataset中的每个元素应用process_func函数，返回一个新的dataset对象
 
     # 配置LoRA
     config = LoraConfig(
