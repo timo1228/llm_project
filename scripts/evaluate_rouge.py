@@ -336,7 +336,7 @@ def main():
     parser.add_argument(
         '--cache-dir',
         type=str,
-        default=None,
+        default='D:/cache/huggingface',
         help='HuggingFace cache directory (default: ~/.cache/huggingface)'
     )
     parser.add_argument(
