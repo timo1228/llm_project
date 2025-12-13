@@ -1,0 +1,5 @@
+# Nutrition5k Report Generation Pipeline
+google-generativeai>=0.3.0
+tqdm>=4.65.0
+
+

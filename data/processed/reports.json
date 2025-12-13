@@ -1,0 +1,983 @@
+{
+  "dish_1561662216": {
+    "report": "Name: Pork and Rice Bowl with Bok Choy and Apple\n\nMain Ingredients: brown rice (68.0g), pork (59.5g), mixed greens (21.3g), white rice (8.5g), bok choy (8.5g)\n\nNutritional Information (per serving):\n- Calories: 300.8 kcal\n- Protein: 18.6 g\n- Fat: 12.4 g\n- Carbohydrates: 28.2 g\n- Total Mass: 193.0 g\n\nNutritional Analysis: This dish provides a moderate source of protein relative to its caloric content. The fat content is considerable, and the carbohydrates are derived from sources with varying fiber content. Consider the sugar and sodium content for dietary management.\n",
+    "metadata": {
+      "calories": 300.794281,
+      "mass": 193.0,
+      "protein": 18.63397,
+      "fat": 12.387489,
+      "carbs": 28.21829,
+      "num_ingredients": 17,
+      "ingredients": [
+        "soy sauce",
+        "garlic",
+        "white rice",
+        "parsley",
+        "onions",
+        "brown rice",
+        "vinegar",
+        "apple",
+        "mixed greens",
+        "sugar",
+        "salt",
+        "lemon juice",
+        "olive oil",
+        "pork",
+        "bok choy",
+        "pepper",
+        "millet"
+      ]
+    }
+  },
+  "dish_1562688426": {
+    "report": "Name: Chicken Apple Sausage with Roasted Potatoes\n\nMain Ingredients: chicken apple sausage (71.0g), roasted potatoes (17.0g)\n\nNutritional Information (per serving):\n- Calories: 137.6 kcal\n- Protein: 10.3 g\n- Fat: 8.3 g\n- Carbohydrates: 5.2 g\n- Total Mass: 88.0 g\n\nNutritional Analysis: This dish provides a moderate source of protein and fat, with a relatively low carbohydrate content. Consider incorporating additional sources of fiber and vegetables to enhance nutritional balance. Monitoring sodium intake may be advisable due to the processed nature of sausage.\n",
+    "metadata": {
+      "calories": 137.569992,
+      "mass": 88.0,
+      "protein": 10.297,
+      "fat": 8.256,
+      "carbs": 5.19,
+      "num_ingredients": 2,
+      "ingredients": [
+        "roasted potatoes",
+        "chicken apple sausage"
+      ]
+    }
+  },
+  "dish_1561662054": {
+    "report": "Name: Pork and Millet Grain Bowl with Greens\n\nMain Ingredients: pork (84.2g), mixed greens (75.3g), green beans (39.0g), millet (12.0g), white rice (12.0g)\n\nNutritional Information (per serving):\n- Calories: 419.4 kcal\n- Protein: 25.9 g\n- Fat: 23.8 g\n- Carbohydrates: 26.4 g\n- Total Mass: 292.0 g\n\nNutritional Analysis: This dish offers a good source of protein derived from the pork. The fat content is moderately high, suggesting mindful portion control. The presence of millet, rice, and various vegetables contributes to carbohydrate intake and some fiber.\n",
+    "metadata": {
+      "calories": 419.438782,
+      "mass": 292.0,
+      "protein": 25.910593,
+      "fat": 23.838249,
+      "carbs": 26.351543,
+      "num_ingredients": 17,
+      "ingredients": [
+        "pepper",
+        "white rice",
+        "mixed greens",
+        "garlic",
+        "soy sauce",
+        "millet",
+        "lemon juice",
+        "bok choy",
+        "olive oil",
+        "onions",
+        "vinegar",
+        "green beans",
+        "pork",
+        "apple",
+        "sugar",
+        "salt",
+        "parsley"
+      ]
+    }
+  },
+  "dish_1562008979": {
+    "report": "Name: Pork Caesar Salad with Wheat Berry and Vegetables\n\nMain Ingredients: caesar salad (131.0g), pork (115.8g), wheat berry (15.4g), cabbage (15.4g)\n\nNutritional Information (per serving):\n- Calories: 382.9 kcal\n- Protein: 35.3 g\n- Fat: 22.2 g\n- Carbohydrates: 10.2 g\n- Total Mass: 290.0 g\n\nNutritional Analysis: This dish is high in protein and moderate in fat, providing a substantial amount of energy. The inclusion of wheat berry, cabbage and carrots contributes a small amount of fiber. Consider the sodium content from the caesar salad and pork preparation for individuals monitoring their sodium intake.\n",
+    "metadata": {
+      "calories": 382.936646,
+      "mass": 290.0,
+      "protein": 35.345387,
+      "fat": 22.224644,
+      "carbs": 10.17357,
+      "num_ingredients": 13,
+      "ingredients": [
+        "jalapenos",
+        "lemon juice",
+        "pork",
+        "wheat berry",
+        "cabbage",
+        "pepper",
+        "salt",
+        "carrot",
+        "garlic",
+        "caesar salad",
+        "olive oil",
+        "parsley",
+        "mayonnaise"
+      ]
+    }
+  },
+  "dish_1560455030": {
+    "report": "Name: Cherry Tomato, Cucumber, and Carrot Medley\n\nMain Ingredients: cherry tomatoes (55.0g), cucumbers (29.0g), baby carrots (19.0g)\n\nNutritional Information (per serving):\n- Calories: 20.6 kcal\n- Protein: 1.0 g\n- Fat: 0.1 g\n- Carbohydrates: 4.6 g\n- Total Mass: 103.0 g\n\nNutritional Analysis: This dish provides a low-calorie source of vitamins and minerals primarily from the vegetables. The protein and fat content are minimal. This medley can be a healthy snack or side dish contributing to daily vegetable intake, but it lacks significant protein or fat and should be consumed as part of a balanced meal.\n",
+    "metadata": {
+      "calories": 20.59,
+      "mass": 103.0,
+      "protein": 0.956,
+      "fat": 0.148,
+      "carbs": 4.625,
+      "num_ingredients": 3,
+      "ingredients": [
+        "cherry tomatoes",
+        "cucumbers",
+        "baby carrots"
+      ]
+    }
+  },
+  "dish_1558372433": {
+    "report": "Name: High-Protein Deprecated Ingredient Dish\n\nMain Ingredients: deprecated (143.0g)\n\nNutritional Information (per serving):\n- Calories: 74.4 kcal\n- Protein: 20.0 g\n- Fat: 0.3 g\n- Carbohydrates: 0.4 g\n- Total Mass: 143.0 g\n\nNutritional Analysis: This dish is exceptionally high in protein relative to its calorie content, making it potentially beneficial for satiety and muscle building. The fat and carbohydrate content are very low. Further information on the specific deprecated ingredient is needed for a complete dietary assessment.\n",
+    "metadata": {
+      "calories": 74.360001,
+      "mass": 143.0,
+      "protein": 20.02,
+      "fat": 0.286,
+      "carbs": 0.429,
+      "num_ingredients": 1,
+      "ingredients": [
+        "deprecated"
+      ]
+    }
+  },
+  "dish_1563379132": {
+    "report": "Name: Traditional Chilaquiles Dish\n\nMain Ingredients: chilaquiles (119.0g)\n\nNutritional Information (per serving):\n- Calories: 232.1 kcal\n- Protein: 10.6 g\n- Fat: 14.3 g\n- Carbohydrates: 14.3 g\n- Total Mass: 119.0 g\n\nNutritional Analysis: This chilaquiles dish provides a moderate amount of protein relative to its caloric content. The fat content is relatively high, which should be considered in the context of overall dietary intake. Including fiber-rich additions could improve the nutritional profile of this dish.\n",
+    "metadata": {
+      "calories": 232.050003,
+      "mass": 119.0,
+      "protein": 10.591001,
+      "fat": 14.28,
+      "carbs": 14.28,
+      "num_ingredients": 1,
+      "ingredients": [
+        "chilaquiles"
+      ]
+    }
+  },
+  "dish_1565640549": {
+    "report": "Name: Green Mango Salad with Citrus Vinaigrette\n\nMain Ingredients: asparagus (34.0g), arugula (32.1g), mustard greens (21.4g), tomatoes (10.7g), cucumbers (10.7g), mangos (10.7g)\n\nNutritional Information (per serving):\n- Calories: 45.5 kcal\n- Protein: 2.6 g\n- Fat: 1.6 g\n- Carbohydrates: 7.0 g\n- Total Mass: 139.0 g\n\nNutritional Analysis: This salad is low in calories and fat, with a moderate amount of carbohydrates and protein. The greens, tomatoes, and cucumbers contribute to the fiber content. Consider adding a source of lean protein for a more balanced meal.\n",
+    "metadata": {
+      "calories": 45.482903,
+      "mass": 139.0,
+      "protein": 2.641478,
+      "fat": 1.568471,
+      "carbs": 7.043886,
+      "num_ingredients": 14,
+      "ingredients": [
+        "tomatoes",
+        "cilantro",
+        "olive oil",
+        "mustard greens",
+        "lemon juice",
+        "onions",
+        "cucumbers",
+        "salt",
+        "arugula",
+        "jalapenos",
+        "asparagus",
+        "lime",
+        "mangos",
+        "cherry tomatoes"
+      ]
+    }
+  },
+  "dish_1563207364": {
+    "report": "Name: Scrambled Egg with Root Vegetables and Grapes\n\nMain Ingredients: scrambled eggs (68.0g), egg whites (67.0g), yam (50.0g), sweet potato (50.0g), grapes (30.0g), olive oil (6.0g)\n\nNutritional Information (per serving):\n- Calories: 309.3 kcal\n- Protein: 15.0 g\n- Fat: 13.8 g\n- Carbohydrates: 30.7 g\n- Total Mass: 271.0 g\n\nNutritional Analysis: This dish provides a moderate source of protein and fat, with carbohydrates primarily from root vegetables and fruit. The inclusion of yam and sweet potato offers a source of fiber. Consider adjusting olive oil quantity to manage overall fat intake based on individual dietary needs.\n",
+    "metadata": {
+      "calories": 309.269989,
+      "mass": 271.0,
+      "protein": 15.01,
+      "fat": 13.774,
+      "carbs": 30.657,
+      "num_ingredients": 6,
+      "ingredients": [
+        "scrambled eggs",
+        "yam",
+        "grapes",
+        "egg whites",
+        "olive oil",
+        "sweet potato"
+      ]
+    }
+  },
+  "dish_1561575474": {
+    "report": "Name: Roasted Vegetable Medley\n\nMain Ingredients: cauliflower (64.0g), roasted potatoes (60.0g), eggplant (57.8g), salt (0.6g), olive oil (0.6g)\n\nNutritional Information (per serving):\n- Calories: 120.1 kcal\n- Protein: 3.0 g\n- Fat: 5.0 g\n- Carbohydrates: 17.4 g\n- Total Mass: 183.0 g\n\nNutritional Analysis: This dish provides a moderate amount of carbohydrates and a relatively low protein content. The fat content is moderate, primarily from olive oil. Consider pairing with a protein source to create a more balanced meal.\n",
+    "metadata": {
+      "calories": 120.058434,
+      "mass": 183.0,
+      "protein": 2.990431,
+      "fat": 4.966118,
+      "carbs": 17.412746,
+      "num_ingredients": 5,
+      "ingredients": [
+        "salt",
+        "eggplant",
+        "roasted potatoes",
+        "cauliflower",
+        "olive oil"
+      ]
+    }
+  },
+  "dish_1550795690": {
+    "report": "Name: Single Apple Serving\n\nMain Ingredients: apple (131.0g)\n\nNutritional Information (per serving):\n- Calories: 68.1 kcal\n- Protein: 0.4 g\n- Fat: 0.3 g\n- Carbohydrates: 18.3 g\n- Total Mass: 131.0 g\n\nNutritional Analysis: This single-ingredient dish is low in protein and fat. The primary macronutrient is carbohydrates, likely from natural sugars. Consuming this food can contribute to daily carbohydrate intake and provide some dietary fiber.\n",
+    "metadata": {
+      "calories": 68.119995,
+      "mass": 131.0,
+      "protein": 0.393,
+      "fat": 0.262,
+      "carbs": 18.34,
+      "num_ingredients": 1,
+      "ingredients": [
+        "apple"
+      ]
+    }
+  },
+  "dish_1563216717": {
+    "report": "Name: Chicken and Broccoli Power Bowl\n\nMain Ingredients: broccoli (129.0g), chicken breast (89.5g), squash (63.1g), honeydew melons (30.0g)\n\nNutritional Information (per serving):\n- Calories: 246.0 kcal\n- Protein: 33.1 g\n- Fat: 5.6 g\n- Carbohydrates: 16.3 g\n- Total Mass: 332.0 g\n\nNutritional Analysis: This dish provides a high protein content relative to its caloric value. The fat content is relatively low. Sources of carbohydrates and fiber include wheat berry, broccoli, squash and honeydew.\n",
+    "metadata": {
+      "calories": 246.007996,
+      "mass": 332.0,
+      "protein": 33.06871,
+      "fat": 5.636517,
+      "carbs": 16.284782,
+      "num_ingredients": 12,
+      "ingredients": [
+        "garlic",
+        "squash",
+        "cherry tomatoes",
+        "chicken breast",
+        "spinach (raw)",
+        "parmesan cheese",
+        "wheat berry",
+        "olive oil",
+        "thyme",
+        "honeydew melons",
+        "salt",
+        "broccoli"
+      ]
+    }
+  },
+  "dish_1565972591": {
+    "report": "Name: Chicken Apple Sausage Serving\n\nMain Ingredients: chicken apple sausage (122.0g)\n\nNutritional Information (per serving):\n- Calories: 195.2 kcal\n- Protein: 17.1 g\n- Fat: 12.2 g\n- Carbohydrates: 3.7 g\n- Total Mass: 122.0 g\n\nNutritional Analysis: This dish provides a good source of protein relative to its calorie content. The fat content is moderate, and carbohydrates are low. Consider pairing with fiber-rich foods to enhance satiety and overall nutritional value.\n",
+    "metadata": {
+      "calories": 195.199997,
+      "mass": 122.0,
+      "protein": 17.08,
+      "fat": 12.2,
+      "carbs": 3.66,
+      "num_ingredients": 1,
+      "ingredients": [
+        "chicken apple sausage"
+      ]
+    }
+  },
+  "dish_1568649312": {
+    "report": "Name: Berry Medley\n\nMain Ingredients: berries (78.0g)\n\nNutritional Information (per serving):\n- Calories: 44.5 kcal\n- Protein: 0.5 g\n- Fat: 0.2 g\n- Carbohydrates: 10.9 g\n- Total Mass: 78.0 g\n\nNutritional Analysis: This dish provides a low-calorie source of carbohydrates, primarily from natural sugars found in berries. The protein and fat content are minimal. Berries are often a good source of dietary fiber and micronutrients; however, the specific fiber content is not provided in this data.\n",
+    "metadata": {
+      "calories": 44.459999,
+      "mass": 78.0,
+      "protein": 0.546,
+      "fat": 0.234,
+      "carbs": 10.92,
+      "num_ingredients": 1,
+      "ingredients": [
+        "berries"
+      ]
+    }
+  },
+  "dish_1550876012": {
+    "report": "Name: Chicken and Potato Bowl with Cantaloupe\n\nMain Ingredients: chicken (120.0g), potatoes (54.0g), cantaloupe (41.0g)\n\nNutritional Information (per serving):\n- Calories: 253.5 kcal\n- Protein: 38.6 g\n- Fat: 4.5 g\n- Carbohydrates: 12.5 g\n- Total Mass: 207.0 g\n\nNutritional Analysis: This dish is high in protein and relatively low in fat. Carbohydrates are present primarily from potatoes and cantaloupe. Consider adding fiber-rich vegetables for a more balanced nutritional profile.\n",
+    "metadata": {
+      "calories": 253.520004,
+      "mass": 207.0,
+      "protein": 38.608002,
+      "fat": 4.455999,
+      "carbs": 12.46,
+      "num_ingredients": 3,
+      "ingredients": [
+        "chicken",
+        "cantaloupe",
+        "potatoes"
+      ]
+    }
+  },
+  "dish_1551565034": {
+    "report": "Name: Raw Carrot Portion\n\nMain Ingredients: carrot (19.0g)\n\nNutritional Information (per serving):\n- Calories: 7.8 kcal\n- Protein: 0.2 g\n- Fat: 0.0 g\n- Carbohydrates: 1.9 g\n- Total Mass: 19.0 g\n\nNutritional Analysis: This dish is very low in calories, fat, and protein. The carbohydrates primarily come from the natural sugars in the carrot. As a source of carrots, it can contribute to daily vitamin A intake.\n",
+    "metadata": {
+      "calories": 7.79,
+      "mass": 19.0,
+      "protein": 0.171,
+      "fat": 0.038,
+      "carbs": 1.9,
+      "num_ingredients": 1,
+      "ingredients": [
+        "carrot"
+      ]
+    }
+  },
+  "dish_1550860747": {
+    "report": "Name: Fresh Pineapple Portion\n\nMain Ingredients: pineapple (79.0g)\n\nNutritional Information (per serving):\n- Calories: 39.5 kcal\n- Protein: 0.4 g\n- Fat: 0.1 g\n- Carbohydrates: 10.3 g\n- Total Mass: 79.0 g\n\nNutritional Analysis: This dish is very low in protein and fat, with the majority of its calories derived from carbohydrates. It is a source of hydration and contains natural sugars. This serving is suitable for those seeking a low-calorie, carbohydrate-rich food option.\n",
+    "metadata": {
+      "calories": 39.5,
+      "mass": 79.0,
+      "protein": 0.395,
+      "fat": 0.079,
+      "carbs": 10.27,
+      "num_ingredients": 1,
+      "ingredients": [
+        "pineapple"
+      ]
+    }
+  },
+  "dish_1566245398": {
+    "report": "Name: Roast Chicken and Steak Plate with Wheat Berry\n\nMain Ingredients: roast chicken (115.0g), steak (84.0g), wheat berry (16.8g), cauliflower (11.2g)\n\nNutritional Information (per serving):\n- Calories: 506.4 kcal\n- Protein: 49.0 g\n- Fat: 31.2 g\n- Carbohydrates: 4.3 g\n- Total Mass: 230.0 g\n\nNutritional Analysis: This dish is high in protein and fat, offering a substantial amount of energy. The protein content is significant relative to the calorie count. The carbohydrate content is low, primarily from wheat berry and cauliflower, suggesting a minimal source of fiber.\n",
+    "metadata": {
+      "calories": 506.355377,
+      "mass": 230.0,
+      "protein": 49.023197,
+      "fat": 31.183908,
+      "carbs": 4.258222,
+      "num_ingredients": 8,
+      "ingredients": [
+        "olive oil",
+        "lime",
+        "salt",
+        "garlic",
+        "cauliflower",
+        "steak",
+        "roast chicken",
+        "wheat berry"
+      ]
+    }
+  },
+  "dish_1563381680": {
+    "report": "Name: Crispy Bacon Bite\n\nMain Ingredients: bacon (6.0g)\n\nNutritional Information (per serving):\n- Calories: 32.5 kcal\n- Protein: 2.2 g\n- Fat: 2.5 g\n- Carbohydrates: 0.1 g\n- Total Mass: 6.0 g\n\nNutritional Analysis: This dish is predominantly a source of fat and protein, with a relatively low calorie content. Due to the high fat content, moderation is advised. The dish lacks significant carbohydrate and fiber sources.\n",
+    "metadata": {
+      "calories": 32.459999,
+      "mass": 6.0,
+      "protein": 2.22,
+      "fat": 2.52,
+      "carbs": 0.084,
+      "num_ingredients": 1,
+      "ingredients": [
+        "bacon"
+      ]
+    }
+  },
+  "dish_1562183096": {
+    "report": "Name: Mushroom and Arugula Salad with Walnut Vinaigrette\n\nMain Ingredients: mushroom (75.0g), arugula (13.5g), chard (2.4g), olive oil (1.9g)\n\nNutritional Information (per serving):\n- Calories: 41.2 kcal\n- Protein: 2.8 g\n- Fat: 2.6 g\n- Carbohydrates: 3.3 g\n- Total Mass: 95.0 g\n\nNutritional Analysis: This salad offers a relatively low-calorie profile with a moderate protein content. The primary fat source is olive oil, contributing beneficial unsaturated fats. Consider increasing the portion size or adding a lean protein source to enhance satiety and nutritional balance.\n",
+    "metadata": {
+      "calories": 41.18898,
+      "mass": 95.0,
+      "protein": 2.80497,
+      "fat": 2.571043,
+      "carbs": 3.28026,
+      "num_ingredients": 10,
+      "ingredients": [
+        "pepper",
+        "chard",
+        "blueberries",
+        "mushroom",
+        "vinegar",
+        "arugula",
+        "mustard",
+        "olive oil",
+        "walnuts",
+        "salt"
+      ]
+    }
+  },
+  "dish_1563476551": {
+    "report": "Name: Salmon and Beef Medley with Roasted Vegetables and Pasta\n\nMain Ingredients: salmon (208.9g), beef (76.3g), squash (69.3g), broccoli (69.3g), zucchini (69.3g), pasta (61.0g)\n\nNutritional Information (per serving):\n- Calories: 1116.4 kcal\n- Protein: 85.5 g\n- Fat: 51.4 g\n- Carbohydrates: 74.7 g\n- Total Mass: 750.0 g\n\nNutritional Analysis: This dish provides a high amount of protein relative to its caloric content, mainly from salmon and beef. The fat content is moderate, and carbohydrates are derived from pasta, vegetables, and smaller portions of rice and brownies. Consider balancing future meals with lower fat and carbohydrate content depending on dietary goals.\n",
+    "metadata": {
+      "calories": 1116.391113,
+      "mass": 750.0,
+      "protein": 85.498482,
+      "fat": 51.413692,
+      "carbs": 74.705963,
+      "num_ingredients": 26,
+      "ingredients": [
+        "shallots",
+        "salmon",
+        "mushroom",
+        "ginger",
+        "squash",
+        "brownies",
+        "lemon juice",
+        "sour cream",
+        "lime",
+        "garlic",
+        "cheese pizza",
+        "wine",
+        "cream",
+        "brown rice",
+        "jalapenos",
+        "spinach (raw)",
+        "beef",
+        "pasta",
+        "thyme",
+        "olive oil",
+        "broccoli",
+        "onions",
+        "zucchini",
+        "salt",
+        "cilantro",
+        "chili"
+      ]
+    }
+  },
+  "dish_1559844951": {
+    "report": "Name: Potato and Almond Medley\n\nMain Ingredients: potatoes (86.0g), almonds (36.0g)\n\nNutritional Information (per serving):\n- Calories: 274.3 kcal\n- Protein: 9.8 g\n- Fat: 17.9 g\n- Carbohydrates: 22.8 g\n- Total Mass: 122.0 g\n\nNutritional Analysis: This dish provides a moderate amount of protein and a relatively high fat content primarily from almonds. Carbohydrates are derived from potatoes. Consider the fat content if managing caloric intake or specific dietary fat restrictions.\n",
+    "metadata": {
+      "calories": 274.335999,
+      "mass": 122.0,
+      "protein": 9.784,
+      "fat": 17.906,
+      "carbs": 22.792,
+      "num_ingredients": 2,
+      "ingredients": [
+        "almonds",
+        "potatoes"
+      ]
+    }
+  },
+  "dish_1550778583": {
+    "report": "Name: Boiled Potato\n\nMain Ingredients: potatoes (88.0g)\n\nNutritional Information (per serving):\n- Calories: 67.8 kcal\n- Protein: 1.8 g\n- Fat: 0.1 g\n- Carbohydrates: 15.0 g\n- Total Mass: 88.0 g\n\nNutritional Analysis: This dish primarily provides carbohydrates with a minimal amount of protein and fat. The protein-to-calorie ratio is low. Consider adding protein and healthy fats to create a more balanced meal.\n",
+    "metadata": {
+      "calories": 67.759995,
+      "mass": 88.0,
+      "protein": 1.76,
+      "fat": 0.088,
+      "carbs": 14.96,
+      "num_ingredients": 1,
+      "ingredients": [
+        "potatoes"
+      ]
+    }
+  },
+  "dish_1562963704": {
+    "report": "Name: Pork and Potato Medley with Asian-Inspired Salad\n\nMain Ingredients: caesar salad (104.0g), roasted potatoes (103.0g), pork (86.2g), pizza (52.0g), rice noodles (35.1g)\n\nNutritional Information (per serving):\n- Calories: 663.8 kcal\n- Protein: 35.9 g\n- Fat: 28.4 g\n- Carbohydrates: 66.1 g\n- Total Mass: 479.0 g\n\nNutritional Analysis: This dish offers a moderate protein content relative to its calorie count. The fat content is also moderate. The presence of mixed greens, cabbage, carrot, and radishes indicates some fiber content, though further analysis would be needed to determine the total fiber amount.\n",
+    "metadata": {
+      "calories": 663.755798,
+      "mass": 479.0,
+      "protein": 35.921761,
+      "fat": 28.423254,
+      "carbs": 66.054832,
+      "num_ingredients": 19,
+      "ingredients": [
+        "radishes",
+        "bok choy",
+        "vinegar",
+        "salt",
+        "roasted potatoes",
+        "mixed greens",
+        "soy sauce",
+        "caesar salad",
+        "garlic",
+        "sugar",
+        "pepper",
+        "white rice",
+        "pork",
+        "rice noodles",
+        "cabbage",
+        "pizza",
+        "olive oil",
+        "carrot",
+        "green onions"
+      ]
+    }
+  },
+  "dish_1566417398": {
+    "report": "Name: Mixed Greens Salad with Celery Root and Cherry Tomatoes\n\nMain Ingredients: mixed greens (32.5g), olive oil (5.2g), vinegar (2.6g), celery root (2.6g), cherry tomatoes (2.6g)\n\nNutritional Information (per serving):\n- Calories: 56.9 kcal\n- Protein: 0.8 g\n- Fat: 5.4 g\n- Carbohydrates: 2.1 g\n- Total Mass: 46.0 g\n\nNutritional Analysis: This salad is low in calories and provides a small amount of protein. The primary macronutrient is fat, largely due to the olive oil content. This salad could benefit from the addition of a significant protein source to improve its overall nutritional balance.\n",
+    "metadata": {
+      "calories": 56.892494,
+      "mass": 46.0,
+      "protein": 0.792647,
+      "fat": 5.357862,
+      "carbs": 2.088042,
+      "num_ingredients": 7,
+      "ingredients": [
+        "mustard",
+        "vinegar",
+        "mixed greens",
+        "celery root",
+        "olive oil",
+        "salt",
+        "cherry tomatoes"
+      ]
+    }
+  },
+  "dish_1561739238": {
+    "report": "Name: Sweet Potato, Egg White, and Berry Breakfast Bowl\n\nMain Ingredients: sweet potato (82.0g), egg whites (71.0g), berries (61.0g), hash browns (43.0g)\n\nNutritional Information (per serving):\n- Calories: 274.2 kcal\n- Protein: 9.5 g\n- Fat: 9.8 g\n- Carbohydrates: 37.6 g\n- Total Mass: 257.0 g\n\nNutritional Analysis: This dish provides a moderate amount of protein and carbohydrates. The inclusion of sweet potato and berries offers some fiber. The fat content should be considered in the context of an individual's dietary needs.\n",
+    "metadata": {
+      "calories": 274.190002,
+      "mass": 257.0,
+      "protein": 9.465,
+      "fat": 9.785,
+      "carbs": 37.556999,
+      "num_ingredients": 4,
+      "ingredients": [
+        "egg whites",
+        "hash browns",
+        "berries",
+        "sweet potato"
+      ]
+    }
+  },
+  "dish_1562611680": {
+    "report": "Name: Caesar Salad with Pepperoni Pizza & Steak\n\nMain Ingredients: caesar salad (110.0g), pepperoni pizza (50.0g), spinach (44.3g), steak (19.9g), olive oil (7.1g)\n\nNutritional Information (per serving):\n- Calories: 326.9 kcal\n- Protein: 16.0 g\n- Fat: 19.4 g\n- Carbohydrates: 24.8 g\n- Total Mass: 256.0 g\n\nNutritional Analysis: This dish provides a moderate amount of protein relative to its calorie content. The fat content is notable, likely derived from the caesar salad dressing, pepperoni pizza, and olive oil. The inclusion of vegetables like spinach and kale contributes to micronutrient intake, although fiber content may be limited.\n",
+    "metadata": {
+      "calories": 326.888977,
+      "mass": 256.0,
+      "protein": 16.028036,
+      "fat": 19.411798,
+      "carbs": 24.775015,
+      "num_ingredients": 18,
+      "ingredients": [
+        "cilantro",
+        "garlic",
+        "olive oil",
+        "pepperoni pizza",
+        "lemon juice",
+        "onions",
+        "vinegar",
+        "blueberries",
+        "salt",
+        "caesar salad",
+        "steak",
+        "kale",
+        "jalapenos",
+        "spinach (raw)",
+        "mustard",
+        "white rice",
+        "radishes",
+        "pineapple"
+      ]
+    }
+  },
+  "dish_1568144828": {
+    "report": "Name: Carrot, Cherry Tomato, and Olive Salad\n\nMain Ingredients: carrot (61.1g), cherry tomatoes (59.0g), olives (31.0g), olive oil (0.6g)\n\nNutritional Information (per serving):\n- Calories: 76.7 kcal\n- Protein: 1.3 g\n- Fat: 4.2 g\n- Carbohydrates: 10.4 g\n- Total Mass: 152.0 g\n\nNutritional Analysis: This dish is relatively low in calories and provides a small amount of protein. The fat content is moderate, primarily from olive oil and olives. It includes carbohydrates derived from vegetables and may contribute to dietary fiber intake.\n",
+    "metadata": {
+      "calories": 76.748177,
+      "mass": 152.0,
+      "protein": 1.329856,
+      "fat": 4.168533,
+      "carbs": 10.369692,
+      "num_ingredients": 6,
+      "ingredients": [
+        "salt",
+        "pepper",
+        "carrot",
+        "olive oil",
+        "olives",
+        "cherry tomatoes"
+      ]
+    }
+  },
+  "dish_1550708440": {
+    "report": "Name: Pineapple Serving\n\nMain Ingredients: pineapple (75.0g)\n\nNutritional Information (per serving):\n- Calories: 37.5 kcal\n- Protein: 0.4 g\n- Fat: 0.1 g\n- Carbohydrates: 9.8 g\n- Total Mass: 75.0 g\n\nNutritional Analysis: This serving provides a low amount of calories, primarily from carbohydrates found in pineapple. The protein and fat content are minimal. This dish can be a good source of hydration and certain micronutrients but should be consumed as part of a balanced diet.\n",
+    "metadata": {
+      "calories": 37.5,
+      "mass": 75.0,
+      "protein": 0.375,
+      "fat": 0.075,
+      "carbs": 9.75,
+      "num_ingredients": 1,
+      "ingredients": [
+        "pineapple"
+      ]
+    }
+  },
+  "dish_1551307090": {
+    "report": "Name: Mushroom, Bacon, and Potato Chip Medley\n\nMain Ingredients: mushroom (22.0g), potato chips (20.0g), bacon (11.0g)\n\nNutritional Information (per serving):\n- Calories: 171.6 kcal\n- Protein: 6.2 g\n- Fat: 11.7 g\n- Carbohydrates: 11.5 g\n- Total Mass: 52.0 g\n\nNutritional Analysis: The dish is relatively high in fat due to the bacon and potato chips. Its protein-to-calorie ratio is moderate. Due to the ingredients, the dish likely contains minimal fiber and may be high in sodium. This dish should be consumed in moderation as part of a balanced diet.\n",
+    "metadata": {
+      "calories": 171.550003,
+      "mass": 52.0,
+      "protein": 6.152,
+      "fat": 11.686,
+      "carbs": 11.48,
+      "num_ingredients": 3,
+      "ingredients": [
+        "potato chips",
+        "bacon",
+        "mushroom"
+      ]
+    }
+  },
+  "dish_1564432238": {
+    "report": "Name: Pork and Pepperoni Pizza Salad with Pineapple and Mixed Vegetables\n\nMain Ingredients: pork (69.2g), pepperoni pizza (63.0g), cauliflower (60.0g), pineapple (58.0g), mixed greens (13.6g)\n\nNutritional Information (per serving):\n- Calories: 455.4 kcal\n- Protein: 28.1 g\n- Fat: 23.2 g\n- Carbohydrates: 34.9 g\n- Total Mass: 315.0 g\n\nNutritional Analysis: This dish provides a moderate amount of protein and fat, with a balanced carbohydrate content. The inclusion of various vegetables contributes to dietary fiber intake. Due to the presence of pepperoni pizza, sodium content should be considered for individuals monitoring their sodium intake.\n",
+    "metadata": {
+      "calories": 455.387939,
+      "mass": 315.0,
+      "protein": 28.074873,
+      "fat": 23.15468,
+      "carbs": 34.854778,
+      "num_ingredients": 22,
+      "ingredients": [
+        "cherry tomatoes",
+        "cauliflower",
+        "lime",
+        "mayonnaise",
+        "jalapenos",
+        "pepperoni pizza",
+        "parsley",
+        "vinegar",
+        "lemon juice",
+        "cabbage",
+        "mixed greens",
+        "lettuce",
+        "salt",
+        "pepper",
+        "pineapple",
+        "pork",
+        "wheat berry",
+        "onions",
+        "cucumbers",
+        "olive oil",
+        "garlic",
+        "carrot"
+      ]
+    }
+  },
+  "dish_1563468327": {
+    "report": "Name: Tropical Fruit Salad with Cottage Cheese and Root Vegetables\n\nMain Ingredients: watermelon (132.0g), pineapple (107.0g), cottage cheese (83.0g), berries (63.0g), yam (46.2g), sweet potato (46.2g), olive oil (5.5g)\n\nNutritional Information (per serving):\n- Calories: 351.9 kcal\n- Protein: 12.1 g\n- Fat: 9.8 g\n- Carbohydrates: 57.5 g\n- Total Mass: 483.0 g\n\nNutritional Analysis: This dish provides a moderate source of protein relative to its caloric content. The fat content is relatively low, primarily derived from olive oil and dairy. Carbohydrates are predominantly from fruits and root vegetables, suggesting a source of dietary fiber.\n",
+    "metadata": {
+      "calories": 351.886047,
+      "mass": 483.0,
+      "protein": 12.099887,
+      "fat": 9.768622,
+      "carbs": 57.495316,
+      "num_ingredients": 7,
+      "ingredients": [
+        "yam",
+        "sweet potato",
+        "cottage cheese",
+        "pineapple",
+        "watermelon",
+        "olive oil",
+        "berries"
+      ]
+    }
+  },
+  "dish_1562862493": {
+    "report": "Name: Simple Scrambled Eggs\n\nMain Ingredients: scrambled eggs (134.0g)\n\nNutritional Information (per serving):\n- Calories: 198.3 kcal\n- Protein: 13.4 g\n- Fat: 14.7 g\n- Carbohydrates: 2.1 g\n- Total Mass: 134.0 g\n\nNutritional Analysis: This dish offers a moderate protein-to-calorie ratio primarily derived from eggs. The fat content is relatively high, suggesting consideration for individuals managing fat intake. The carbohydrate content is minimal, lacking substantial fiber.\n",
+    "metadata": {
+      "calories": 198.320007,
+      "mass": 134.0,
+      "protein": 13.400001,
+      "fat": 14.74,
+      "carbs": 2.144,
+      "num_ingredients": 1,
+      "ingredients": [
+        "scrambled eggs"
+      ]
+    }
+  },
+  "dish_1558549008": {
+    "report": "Name: Fresh Cherry Tomato Snack\n\nMain Ingredients: cherry tomatoes (115.0g)\n\nNutritional Information (per serving):\n- Calories: 20.7 kcal\n- Protein: 1.0 g\n- Fat: 0.2 g\n- Carbohydrates: 4.5 g\n- Total Mass: 115.0 g\n\nNutritional Analysis: This snack is very low in calories and fat, with a small amount of protein. The carbohydrates primarily come from sugars and fiber found naturally in tomatoes. This can be a hydrating and nutrient-rich snack option; consider pairing it with a protein source for a more balanced nutritional profile.\n",
+    "metadata": {
+      "calories": 20.700001,
+      "mass": 115.0,
+      "protein": 1.035,
+      "fat": 0.23,
+      "carbs": 4.485,
+      "num_ingredients": 1,
+      "ingredients": [
+        "cherry tomatoes"
+      ]
+    }
+  },
+  "dish_1560453174": {
+    "report": "Name: Chicken and Mixed Vegetable Medley\n\nMain Ingredients: chicken (90.6g), spinach (72.2g), green beans (33.0g), olive oil (13.0g)\n\nNutritional Information (per serving):\n- Calories: 329.7 kcal\n- Protein: 32.1 g\n- Fat: 18.1 g\n- Carbohydrates: 10.5 g\n- Total Mass: 256.0 g\n\nNutritional Analysis: This dish provides a high protein content relative to its caloric value. The fat content is moderate, largely derived from olive oil and almonds. The presence of various vegetables contributes to micronutrient intake, though the carbohydrate content is relatively low.\n",
+    "metadata": {
+      "calories": 329.716248,
+      "mass": 256.0,
+      "protein": 32.1376,
+      "fat": 18.145134,
+      "carbs": 10.521854,
+      "num_ingredients": 20,
+      "ingredients": [
+        "basil",
+        "rosemary",
+        "carrot",
+        "olive oil",
+        "almonds",
+        "lemon juice",
+        "parsley",
+        "green beans",
+        "blueberries",
+        "chicken",
+        "pepper",
+        "salt",
+        "garlic",
+        "vinegar",
+        "zucchini",
+        "mustard",
+        "spinach (raw)",
+        "thyme",
+        "wheat berry",
+        "squash"
+      ]
+    }
+  },
+  "dish_1551226363": {
+    "report": "Name: Steamed Broccoli\n\nMain Ingredients: broccoli (49.0g)\n\nNutritional Information (per serving):\n- Calories: 17.1 kcal\n- Protein: 1.2 g\n- Fat: 0.2 g\n- Carbohydrates: 3.4 g\n- Total Mass: 49.0 g\n\nNutritional Analysis: This dish is low in calories and fat, providing a modest amount of protein. The primary nutritional contribution likely comes from the vitamins and minerals inherent in broccoli, as well as its fiber content. This makes it a healthy addition to a balanced diet.\n",
+    "metadata": {
+      "calories": 17.15,
+      "mass": 49.0,
+      "protein": 1.176,
+      "fat": 0.196,
+      "carbs": 3.43,
+      "num_ingredients": 1,
+      "ingredients": [
+        "broccoli"
+      ]
+    }
+  },
+  "dish_1562691032": {
+    "report": "Name: Scrambled Eggs with Berries, Pineapple, Potatoes & Broccoli\n\nMain Ingredients: scrambled eggs (147.0g), berries (85.0g), pineapple (80.0g), roasted potatoes (66.0g), broccoli (36.1g)\n\nNutritional Information (per serving):\n- Calories: 419.7 kcal\n- Protein: 17.9 g\n- Fat: 22.0 g\n- Carbohydrates: 39.1 g\n- Total Mass: 415.0 g\n\nNutritional Analysis: This dish provides a moderate source of protein relative to its caloric content. The fat content is relatively high. Berries, pineapple, potatoes, and broccoli contribute to carbohydrate and fiber intake.\n",
+    "metadata": {
+      "calories": 419.681702,
+      "mass": 415.0,
+      "protein": 17.94734,
+      "fat": 22.039829,
+      "carbs": 39.058826,
+      "num_ingredients": 6,
+      "ingredients": [
+        "berries",
+        "olive oil",
+        "pineapple",
+        "scrambled eggs",
+        "roasted potatoes",
+        "broccoli"
+      ]
+    }
+  },
+  "dish_1551374440": {
+    "report": "Name: Banana Portion\n\nMain Ingredients: banana (54.0g)\n\nNutritional Information (per serving):\n- Calories: 48.1 kcal\n- Protein: 0.6 g\n- Fat: 0.2 g\n- Carbohydrates: 12.4 g\n- Total Mass: 54.0 g\n\nNutritional Analysis: This portion provides a low protein-to-calorie ratio. The fat content is minimal. It is a source of carbohydrates, primarily from sugars and potentially some fiber, depending on banana ripeness.\n",
+    "metadata": {
+      "calories": 48.059998,
+      "mass": 54.0,
+      "protein": 0.594,
+      "fat": 0.162,
+      "carbs": 12.42,
+      "num_ingredients": 1,
+      "ingredients": [
+        "banana"
+      ]
+    }
+  },
+  "dish_1563824250": {
+    "report": "Name: Diced Onions\n\nMain Ingredients: onions (43.0g)\n\nNutritional Information (per serving):\n- Calories: 17.2 kcal\n- Protein: 0.5 g\n- Fat: 0.0 g\n- Carbohydrates: 3.9 g\n- Total Mass: 43.0 g\n\nNutritional Analysis: This serving of diced onions is very low in calories and fat. The protein content is minimal, and the carbohydrates primarily come from sugars and fiber. This food could contribute to daily vegetable intake and provide some fiber.\n",
+    "metadata": {
+      "calories": 17.200001,
+      "mass": 43.0,
+      "protein": 0.473,
+      "fat": 0.043,
+      "carbs": 3.87,
+      "num_ingredients": 1,
+      "ingredients": [
+        "onions"
+      ]
+    }
+  },
+  "dish_1560543755": {
+    "report": "Name: Roasted Chicken and Vegetable Medley with Rice Noodles\n\nMain Ingredients: roasted potatoes (86.0g), cauliflower (75.0g), chicken (43.0g), rice noodles (19.7g), mixed greens (9.8g)\n\nNutritional Information (per serving):\n- Calories: 257.9 kcal\n- Protein: 17.4 g\n- Fat: 8.9 g\n- Carbohydrates: 27.4 g\n- Total Mass: 264.0 g\n\nNutritional Analysis: This dish provides a good source of protein relative to its calorie content, largely due to the chicken. The fat content is moderate. While several vegetables contribute to potential fiber intake, the carbohydrate source primarily comes from rice noodles and potatoes, suggesting a relatively low fiber density overall.\n",
+    "metadata": {
+      "calories": 257.924927,
+      "mass": 264.0,
+      "protein": 17.404505,
+      "fat": 8.887804,
+      "carbs": 27.355255,
+      "num_ingredients": 19,
+      "ingredients": [
+        "green onions",
+        "chicken",
+        "cauliflower",
+        "green beans",
+        "spinach (raw)",
+        "ginger",
+        "olive oil",
+        "roasted potatoes",
+        "mixed greens",
+        "carrot",
+        "broccoli",
+        "salt",
+        "white rice",
+        "vinegar",
+        "rice noodles",
+        "cabbage",
+        "radishes",
+        "soy sauce",
+        "garlic"
+      ]
+    }
+  },
+  "dish_1558549773": {
+    "report": "Name: Raw Spinach Serving\n\nMain Ingredients: spinach (raw) (10.0g)\n\nNutritional Information (per serving):\n- Calories: 2.3 kcal\n- Protein: 0.3 g\n- Fat: 0.0 g\n- Carbohydrates: 0.4 g\n- Total Mass: 10.0 g\n\nNutritional Analysis: This serving of raw spinach is very low in calories and fat. It provides a small amount of protein and carbohydrates. The nutritional value primarily derives from potential vitamins and minerals inherent in spinach, not reflected in the macronutrient breakdown.\n",
+    "metadata": {
+      "calories": 2.3,
+      "mass": 10.0,
+      "protein": 0.29,
+      "fat": 0.04,
+      "carbs": 0.36,
+      "num_ingredients": 1,
+      "ingredients": [
+        "spinach (raw)"
+      ]
+    }
+  },
+  "dish_1563822597": {
+    "report": "Name: Caesar Salad with Broccoli, Squash, and Zucchini\n\nMain Ingredients: caesar salad (88.0g), broccoli (29.3g), squash (29.3g), zucchini (29.3g)\n\nNutritional Information (per serving):\n- Calories: 59.4 kcal\n- Protein: 4.1 g\n- Fat: 2.2 g\n- Carbohydrates: 7.6 g\n- Total Mass: 176.0 g\n\nNutritional Analysis: This dish provides a modest amount of protein relative to its caloric content. The inclusion of broccoli, squash, and zucchini contributes dietary fiber. The fat content is relatively low, which may require supplementation with other sources depending on dietary needs.\n",
+    "metadata": {
+      "calories": 59.400002,
+      "mass": 176.0,
+      "protein": 4.106667,
+      "fat": 2.170667,
+      "carbs": 7.626667,
+      "num_ingredients": 4,
+      "ingredients": [
+        "broccoli",
+        "caesar salad",
+        "squash",
+        "zucchini"
+      ]
+    }
+  },
+  "dish_1551492561": {
+    "report": "Name: Sausage, Olive, and Mushroom Medley\n\nMain Ingredients: sausage (87.0g), olives (45.0g), mushroom (29.0g)\n\nNutritional Information (per serving):\n- Calories: 357.9 kcal\n- Protein: 18.1 g\n- Fat: 28.7 g\n- Carbohydrates: 7.4 g\n- Total Mass: 159.0 g\n\nNutritional Analysis: This dish is relatively high in fat, with a moderate protein content. The protein-to-calorie ratio suggests it contributes significantly to protein intake. Due to the fat content, moderation is advised for individuals monitoring their fat intake.\n",
+    "metadata": {
+      "calories": 357.932007,
+      "mass": 159.0,
+      "protein": 18.050001,
+      "fat": 28.653,
+      "carbs": 7.446,
+      "num_ingredients": 3,
+      "ingredients": [
+        "olives",
+        "mushroom",
+        "sausage"
+      ]
+    }
+  },
+  "dish_1566920365": {
+    "report": "Name: Egg White & Sweet Potato Scramble with Salsa\n\nMain Ingredients: egg whites (570.0g), sweet potato (156.1g), salsa (141.0g), olive oil (3.9g)\n\nNutritional Information (per serving):\n- Calories: 490.4 kcal\n- Protein: 60.7 g\n- Fat: 5.3 g\n- Carbohydrates: 41.4 g\n- Total Mass: 871.0 g\n\nNutritional Analysis: This dish is high in protein and relatively low in fat, primarily sourced from olive oil. The sweet potato provides carbohydrates and dietary fiber. Individuals should be mindful of sodium content, particularly from the salsa.\n",
+    "metadata": {
+      "calories": 490.421692,
+      "mass": 871.0,
+      "protein": 60.675976,
+      "fat": 5.324439,
+      "carbs": 41.393566,
+      "num_ingredients": 4,
+      "ingredients": [
+        "salsa",
+        "sweet potato",
+        "olive oil",
+        "egg whites"
+      ]
+    }
+  },
+  "dish_1563984242": {
+    "report": "Name: Egg White Scramble with Tropical Fruit and Sweet Potato\n\nMain Ingredients: egg whites (472.0g), cantaloupe (136.0g), sweet potato (81.0g), pineapple (62.0g), olive oil (2.0g)\n\nNutritional Information (per serving):\n- Calories: 402.1 kcal\n- Protein: 49.4 g\n- Fat: 3.3 g\n- Carbohydrates: 36.8 g\n- Total Mass: 753.0 g\n\nNutritional Analysis: This dish is high in protein and relatively low in fat, making it a lean option. The carbohydrates are primarily derived from fruits and sweet potato, providing fiber. Individuals with diabetes should monitor portion sizes due to the carbohydrate content.\n",
+    "metadata": {
+      "calories": 402.117035,
+      "mass": 753.0,
+      "protein": 49.407761,
+      "fat": 3.30239,
+      "carbs": 36.819611,
+      "num_ingredients": 5,
+      "ingredients": [
+        "sweet potato",
+        "egg whites",
+        "pineapple",
+        "olive oil",
+        "cantaloupe"
+      ]
+    }
+  },
+  "dish_1551237016": {
+    "report": "Name: Lean Beef Portion\n\nMain Ingredients: beef (37.0g)\n\nNutritional Information (per serving):\n- Calories: 92.5 kcal\n- Protein: 9.6 g\n- Fat: 5.5 g\n- Carbohydrates: 0.0 g\n- Total Mass: 37.0 g\n\nNutritional Analysis: This dish provides a good source of protein relative to its caloric content. The dish is low in fat and contains no carbohydrates. This food is suitable for individuals following low-carbohydrate diets, but it should be incorporated into a balanced diet with other nutrient sources.\n",
+    "metadata": {
+      "calories": 92.5,
+      "mass": 37.0,
+      "protein": 9.62,
+      "fat": 5.55,
+      "carbs": 0.0,
+      "num_ingredients": 1,
+      "ingredients": [
+        "beef"
+      ]
+    }
+  },
+  "dish_1551489812": {
+    "report": "Name: Olive Snack\n\nMain Ingredients: olives (65.0g)\n\nNutritional Information (per serving):\n- Calories: 74.8 kcal\n- Protein: 0.5 g\n- Fat: 7.0 g\n- Carbohydrates: 4.1 g\n- Total Mass: 65.0 g\n\nNutritional Analysis: This snack is relatively low in protein and moderate in fat content. The primary macronutrient source is fat, with a smaller contribution from carbohydrates. Consider portion control due to the calorie density from fat.\n",
+    "metadata": {
+      "calories": 74.75,
+      "mass": 65.0,
+      "protein": 0.52,
+      "fat": 6.955,
+      "carbs": 4.095,
+      "num_ingredients": 1,
+      "ingredients": [
+        "olives"
+      ]
+    }
+  },
+  "dish_1558459276": {
+    "report": "Name: Plain White Rice\n\nMain Ingredients: white rice (79.0g)\n\nNutritional Information (per serving):\n- Calories: 102.7 kcal\n- Protein: 2.1 g\n- Fat: 0.2 g\n- Carbohydrates: 22.1 g\n- Total Mass: 79.0 g\n\nNutritional Analysis: This dish is primarily a carbohydrate source with a low protein and fat content. The protein-to-calorie ratio is low. Consider pairing with protein and fiber-rich foods for a more balanced meal.\n",
+    "metadata": {
+      "calories": 102.699997,
+      "mass": 79.0,
+      "protein": 2.133,
+      "fat": 0.237,
+      "carbs": 22.120001,
+      "num_ingredients": 1,
+      "ingredients": [
+        "white rice"
+      ]
+    }
+  },
+  "dish_1560974707": {
+    "report": "Name: Spinach, Black Bean, and Corn Salad with Lime Dressing\n\nMain Ingredients: spinach (25.9g), black beans (10.4g), corn (5.2g), onions (4.2g)\n\nNutritional Information (per serving):\n- Calories: 55.0 kcal\n- Protein: 3.0 g\n- Fat: 2.0 g\n- Carbohydrates: 7.1 g\n- Total Mass: 60.0 g\n\nNutritional Analysis: This dish provides a modest source of protein relative to its caloric content. The fat content is relatively low. Fiber is likely contributed by the spinach, black beans, and corn, which supports digestive health.\n",
+    "metadata": {
+      "calories": 55.025124,
+      "mass": 60.0,
+      "protein": 2.992605,
+      "fat": 2.003546,
+      "carbs": 7.088692,
+      "num_ingredients": 13,
+      "ingredients": [
+        "onions",
+        "spinach (raw)",
+        "cherry tomatoes",
+        "tortilla chips",
+        "corn",
+        "cheese",
+        "salt",
+        "chili",
+        "tomatoes",
+        "garlic",
+        "lime",
+        "sour cream",
+        "black beans"
+      ]
+    }
+  },
+  "dish_1564686855": {
+    "report": "Name: Chicken and Pizza Combination with Salad\n\nMain Ingredients: chicken breast (122.0g), cheese pizza (105.0g), brownies (92.0g), mixed greens (31.8g)\n\nNutritional Information (per serving):\n- Calories: 1030.2 kcal\n- Protein: 56.8 g\n- Fat: 52.1 g\n- Carbohydrates: 85.9 g\n- Total Mass: 435.0 g\n\nNutritional Analysis: This dish provides a high amount of protein and calories, but also a significant amount of fat and carbohydrates. While the mixed greens and other vegetables contribute some fiber and micronutrients, the pizza and brownies suggest a less optimal carbohydrate source. Consider reducing portion sizes or balancing this meal with lower-calorie, nutrient-dense options.\n",
+    "metadata": {
+      "calories": 1030.160645,
+      "mass": 435.0,
+      "protein": 56.845505,
+      "fat": 52.116467,
+      "carbs": 85.930336,
+      "num_ingredients": 14,
+      "ingredients": [
+        "cucumbers",
+        "onions",
+        "brownies",
+        "chicken breast",
+        "cherry tomatoes",
+        "olives",
+        "salt",
+        "lettuce",
+        "cheese pizza",
+        "mixed greens",
+        "lime",
+        "pepper",
+        "olive oil",
+        "vinegar"
+      ]
+    }
+  }
+}

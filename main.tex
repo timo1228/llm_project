@@ -1,0 +1,127 @@
+\documentclass{article}
+% ======== PACKAGES ========
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+% ======== FORMATTING ========
+\setstretch{1.2}
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+\setlist[itemize]{noitemsep, topsep=4pt}
+
+% ======== DOCUMENT ========
+\begin{document}
+
+\begin{center}
+    {\Large \textbf{Course:} CSCI-GA 3033-091: LLM-based Generative AI Systems} \\[0.8em]
+    {\Large \textbf{Project Title:} NutriVision: A Parameter-Efficient LMM for Food Image-to-Nutrition Analysis} \\[1em]
+    {\large \textbf{Authors:} Hongyu Chen (hc4569), Yiting Chen (yc7725)} \\ [0.8em]
+    {\large \textbf{Date:} October 20}
+\end{center}
+
+\vspace{1em}
+
+% ======== SECTIONS ========
+
+
+\section{Clarity of Objectives}
+\subsection{Problem Statement:} General-purpose Large Language Models (LLMs) often lack the fine-grained, domain-specific knowledge required for specialized tasks. In the health and wellness sector, manual nutritional tracking is a significant burden for users. This project seeks to address this specific problem by creating a system that can generate a detailed, structured nutritional analysis from a single image of a food dish. This directly addresses the need for novel applications of generative AI.
+
+\subsection{Research Questions: }
+This project aims to investigate the following core research questions:
+\begin{itemize}
+    \item To what extent can a parameter-efficient adapter (e.g., LoRA) effectively bridge a frozen vision encoder and a frozen LLM for the specialized, knowledge-intensive task of food nutritional analysis?
+    \item What is the performance and efficiency trade-off of this parameter-efficient approach (training $<$1\% of total parameters) compared to the theoretical baseline of a fully end-to-end fine-tuned model?
+\end{itemize}
+
+\subsection{Expected Outcomes and Deliverables: }
+The project will produce the following concrete deliverables:
+\begin{itemize}
+    \item A trained NutriVision model, specifically the lightweight Adapter weights.
+    \item A public code repository containing all data processing, training, and evaluation scripts to ensure full reproducibility.
+    \item A comprehensive final report and presentation detailing the methodology, results, and analysis.
+    \item A functional web-based application to demonstrate the model's capabilities.
+\end{itemize}
+
+\subsection{Course Alignment:} 
+This project directly aligns with the course objectives by exploring the architecture and application of generative AI systems based on LLMs. It will provide practical experience in multi-modal (vision-language) systems, parameter-efficient fine-tuning (PEFT) techniques, and generative text evaluation.
+
+\section{Innovation and Relevance} 
+\subsection{Originality and Novelty: } 
+The project's innovation lies in its novel application and methodology. Unlike standard image captioning, this task requires a more complex form of \textbf{visual-knowledge reasoning}. The model must first identify the food item, infer its constituent ingredients and preparation method (e.g., "fried" vs. "steamed"), and then query the LLM's latent knowledge base to retrieve and synthesize factual, quantitative nutritional data into a coherent text output.
+\subsection{Connection to GenAI Trends: } 
+This project is directly connected to two of the most significant trends in current GenAI research:
+\begin{itemize}
+    \item \textbf{Model Specialization:} It explores the shift away from monolithic, one-size-fits-all models toward creating highly specialized, efficient models for vertical domains (in this case, nutrition) through adaptation.
+    \item \textbf{Parameter-Efficient Fine-Tuning (PEFT):} It leverages state-of-the-art PEFT techniques, which are critical for making large model customization computationally and financially feasible.
+\end{itemize}
+
+\subsection{Related Work: } 
+The proposed methodology stands on the shoulders of two key areas of research:
+\begin{itemize}
+    \item \textbf{Vision-Language Architectures:} Models like CLIP~\cite{radford2021clip} first demonstrated the effectiveness of large-scale contrastive pretraining to align visual and textual representations in a shared embedding space, laying the foundation for vision-language understanding. Building on this idea, Flamingo~\cite{alayrac2022flamingo} introduced a flexible architecture that connects a frozen vision encoder with a large language model through cross-attention layers, enabling few-shot visual reasoning and dialogue. Subsequently, BLIP-2~\cite{li2023blip2} proposed a more parameter-efficient design using a lightweight ``Querying Transformer'' (Q-Former) to bridge the modality gap between frozen image encoders and frozen LLMs. More recently, LLaVA~\cite{liu2023llava} extended this direction by performing visual instruction tuning, aligning visual features with instruction-following capabilities of LLMs to support open-ended multimodal dialogue. 
+
+    Our project adopts this line of architectural philosophy, leveraging frozen visual and language backbones while fine-tuning lightweight adapter layers to efficiently specialize the model for food image understanding and nutritional reasoning.
+
+    \item \textbf{PEFT Methods:} Research in \textbf{LoRA (Low-Rank Adaptation)}\cite{2021lora} has demonstrated that by injecting small, trainable low-rank matrices into a frozen model, it is possible to achieve performance comparable to full fine-tuning while training only a tiny fraction of the parameters. We will implement LoRA as our specific adapter strategy.
+\end{itemize}
+
+\section{Feasibilty}
+\subsection{Scope Definition}
+The project scope is clearly defined. We explicitly \textbf{exclude} the estimation of food volume or weight from a single 2D image, as this problem is ill-posed without depth or scale references. The model's task is to identify the dish and provide a standardized nutritional analysis (e.g., "per 100g" or "per serving"), which is a tractable and high-value problem.
+
+\subsection{Required Resources and Availability: }
+The resources required are available and sufficient for the project's success.
+\begin{itemize}
+    \item \textbf{Computue:} The project will be trained using 1-2 A100 GPUs. This is sufficient for LoRA-based fine-tuning of an 8B-parameter model.
+    \item \textbf{Models:} We will use CLIP ViT-L/14 as the frozen vision encoder and a high-performance 7-8B parameter model, such as Llama 3 8B or Qwen 1.5 7B, as the frozen LLM.
+    \item \textbf{Data:} We will leverage the Nutrition5k\cite{Nutrition5k} dataset. This dataset is ideal as it provides 5,000 real-world food dishes with both multiple images and, crucially, corresponding fine-grained nutritional content, including calories, mass, and macronutrients. This resource eliminates the primary challenge of data mapping.
+\end{itemize}
+
+\subsection{Methodology and Timeline: }
+The project will be executed over the next 8 weeks according to the following realistic timeline:
+\begin{table}[h!]
+\centering
+\caption{Project Timeline and Milestones}
+\begin{tabular}{|c|c|p{4cm}|p{5cm}|}
+\hline
+\textbf{Week} & \textbf{Dates (2025)} & \textbf{Task} & \textbf{Deliverable / Milestone} \\ \hline
+1 & 10/20 -- 10/26 & Literature Review \& Environment Setup & Read key papers (BLIP-2, LoRA); configure A100 environment. \\ \hline
+2--3 & 10/27 -- 11/09 & Data Synthesis & Parse Nutrition5k data; use a cost-effective API (e.g., Gemini 1.5 Flash) to convert structured data into target text labels. \\ \hline
+4 & 11/10 -- 11/16 & Model Implementation & Implement the Frozen Encoder $\rightarrow$ LoRA Adapter $\rightarrow$ Frozen LLM pipeline using \texttt{transformers} and \texttt{peft} libraries. \\ \hline
+5--6 & 11/17 -- 11/30 & Model Training \& Tuning & Train and fine-tune the model; perform preliminary validation. \\ \hline
+7 & 12/01 -- 12/07 & Evaluation \& Demo Development & Conduct quantitative and qualitative analysis; begin building the web demo. \\ \hline
+8 & 12/08 -- 12/15 & Final Report \& Presentation & Complete final report, presentation, and code/tutorial components. \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Challenges and Mitigation Strategies:}
+We have identified the following potential challenges and have clear mitigation strategies:
+\begin{itemize}
+    \item \textbf{Challenge 1:} Overfitting due to the modest size of the Nutrition5k dataset (5k dishes).
+    \item \textbf{Mitigation 1:} The primary mitigation is our core methodology. By using PEFT (LoRA), we are training only a few million parameters, not billions, which inherently and drastically reduces the risk of overfitting. This will be validated through ablation studies.
+    \item \textbf{Challenge 2:} Evaluating the factual accuracy of generative text.
+    \item \textbf{Mitigation 2:} We will develop a custom evaluation script. This script will parse the generated text (e.g., using regular expressions) to extract nutritional numbers and compare them directly against the ground-truth values from the Nutrition5k dataset's structured labels, providing a hard quantitative metric for factual accuracy.
+    \item \textbf{Challenge 3:} Effectively aligning the semantic information of food images to the language model's embedding space.
+    \item \textbf{Mitigation 3:} We will employ a lightweight projection adapter (e.g., Q-Former or linear projection) to map frozen visual encoder outputs into the LLM's semantic space. The alignment will be further refined through instruction tuning on image-to-nutrition paired data, ensuring that the LLM can accurately interpret and generate nutrition-related descriptions.
+
+    
+\end{itemize}
+
+\clearpage
+\bibliographystyle{plain}  % 或者使用 ieee, unsrt, apalike, etc.
+\bibliography{reference}
+
+\vfill
+\begin{center}
+    \textit{End of Proposal}
+\end{center}
+
+
+
+\end{document}
+
