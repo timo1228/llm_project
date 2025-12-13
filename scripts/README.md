@@ -176,4 +176,40 @@ gsutil -m cp -r "gs://nutrition5k_dataset/nutrition5k_dataset/imagery/side_angle
 
 **Missing Packages:** Run `pip install google-generativeai tqdm`
 
+## ROUGE Evaluation
+
+After training your model, you can evaluate its performance using ROUGE metrics:
+
+```bash
+# Basic evaluation
+python3 scripts/evaluate_rouge.py --checkpoint ./output/Qwen2.5-VL-7B-nutrition/checkpoint-215
+
+# With custom parameters
+python3 scripts/evaluate_rouge.py \
+    --checkpoint ./output/Qwen2.5-VL-7B-nutrition/checkpoint-215 \
+    --test-split 0.2 \
+    --max-samples 100 \
+    --seed 42 \
+    --output-dir results/evaluation \
+    --save-details \
+    --imagery-dir /path/to/nutrition5k/imagery
+```
+
+**Parameters:**
+- `--checkpoint`: Path to LoRA adapter checkpoint (required)
+- `--test-split`: Test set proportion (default: 0.2)
+- `--max-samples`: Maximum number of test samples to evaluate (default: all)
+- `--seed`: Random seed for reproducibility (default: 42)
+- `--output-dir`: Output directory for results (default: results/evaluation)
+- `--save-details`: Save detailed results for each sample
+- `--imagery-dir`: Path to Nutrition5k imagery directory (optional)
+- `--device`: Device to use: auto, cuda, or cpu (default: auto)
+
+**Output:**
+- Console output: ROUGE-1, ROUGE-2, and ROUGE-L scores (precision, recall, F-measure)
+- JSON file: `results/evaluation/rouge_evaluation_results.json` with aggregated scores and optional detailed per-sample results
+
+**Dependencies:**
+- Install ROUGE evaluation library: `pip install rouge-score` or `pip install datasets[evaluate]`
+
 
