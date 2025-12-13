@@ -9,7 +9,7 @@ import torch.nn as nn
 import torch.distributed as dist
 import torch.nn.functional as F
 
-from blip2 import custom as dist_utils
+from blip2.custom.common import dist_utils
 from blip2.custom.common.dist_utils import download_cached_file
 from blip2.custom.common.utils import is_url
 from blip2.custom.common.logger import MetricLogger

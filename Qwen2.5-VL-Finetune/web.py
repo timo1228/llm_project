@@ -50,7 +50,7 @@ def load_model():
     )
     
     # Load adapter
-    adapter_path = "./output/Qwen2.5-VL-7B-nutrition/checkpoint-215"
+    adapter_path = "D:\School\IntroToLLM\Project\Qwen2.5-VL-Finetune\output\Qwen2.5-VL-7B-nutrition\checkpoint-215"
     model = PeftModel.from_pretrained(base_model, model_id=adapter_path, config=val_config)
     model.eval()
     print("Model loaded successfully!")

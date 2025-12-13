@@ -12,7 +12,7 @@ import torch
 import torch.distributed as dist
 from itertools import chain
 
-from blip2 import custom as dist_utils
+from blip2.custom.common import dist_utils
 from blip2.custom.common.dist_utils import get_rank, get_world_size, is_main_process
 from blip2.custom.common.registry import registry
 from blip2.custom.common.vqa_tools.vqa_eval import VQAEval as VQATool

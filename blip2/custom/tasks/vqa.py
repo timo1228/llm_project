@@ -12,7 +12,7 @@ import torch
 from tqdm import tqdm
 
 from blip2.custom.common.utils import is_convertible_to_int
-from blip2 import custom as dist_utils
+from blip2.custom.common import dist_utils
 from blip2.custom.common.registry import registry
 from blip2.custom.common.vqa_tools.vqa import VQA
 from blip2.custom.common.vqa_tools.vqa_eval import VQAEval
