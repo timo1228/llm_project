@@ -24,7 +24,7 @@ app = FastAPI(title="NutriVision API", description="A Parameter-Efficient LMM fo
 # Enable CORS for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -44,7 +44,7 @@ def load_model():
     model_path = "Qwen/Qwen2.5-VL-7B-Instruct"
     
     # Cache directory - can be set via environment variable or use default
-    cache_dir = os.getenv("HF_CACHE_DIR", os.path.expanduser("~/.cache/huggingface"))
+    cache_dir = os.getenv("HF_CACHE_DIR", os.path.expanduser("D:/cache/huggingface"))
     
     print(f"Using device: {device}")
     print(f"Cache directory: {cache_dir}")
@@ -78,7 +78,7 @@ def load_model():
         )
         
         # Load adapter - adjust path as needed
-        adapter_path = os.getenv("ADAPTER_PATH", "./output/Qwen2.5-VL-7B-nutrition/checkpoint-215")
+        adapter_path = os.getenv("ADAPTER_PATH", "D:\School\IntroToLLM\Project\Qwen2.5-VL-Finetune\output\Qwen2.5-VL-7B-nutrition\checkpoint-215")
         model = PeftModel.from_pretrained(base_model, model_id=adapter_path, config=val_config)
         model.eval()
         print("Model loaded successfully!")

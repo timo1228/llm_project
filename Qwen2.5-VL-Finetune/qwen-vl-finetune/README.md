@@ -1,3 +1,5 @@
+# This is the official fine-tuning scirpts from Qwen team, our project training scripts is designed based on this
+
 # QwenVL Training Framework
 
 This repository provides a training framework for Qwen VL models. The are two steps to use our repo:
