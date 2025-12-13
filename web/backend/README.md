@@ -1,14 +1,14 @@
-# 营养报告生成后端服务
+# Nutrition Report Generation Backend Service
 
-基于 Qwen2.5-VL-7B-Instruct 模型和 LoRA 适配器的营养报告生成 API。
+API for generating nutrition reports based on the Qwen2.5-VL-7B-Instruct model and LoRA adapter.
 
-## 环境要求
+## Requirements
 
 - Python 3.10+
-- CUDA (可选，用于 GPU 加速)
-- 足够的磁盘空间存储模型文件（约 15GB）
+- CUDA (Optional, for GPU acceleration)
+- Sufficient disk space for model files (approx. 15GB)
 
-## 安装依赖
+## Installation
 
 ```bash
 conda activate image-upload
@@ -16,35 +16,35 @@ cd backend
 pip install -r requirements.txt
 ```
 
-## 配置
+## Configuration
 
-### 环境变量
+### Environment Variables
 
-可以通过环境变量配置模型路径：
+You can configure model paths via environment variables:
 
-- `HF_CACHE_DIR`: Hugging Face 模型缓存目录（默认: `~/.cache/huggingface`）
-- `ADAPTER_PATH`: LoRA 适配器路径（默认: `./output/Qwen2.5-VL-7B-nutrition/checkpoint-215`）
+- `HF_CACHE_DIR`: Hugging Face model cache directory (Default: `~/.cache/huggingface`)
+- `ADAPTER_PATH`: LoRA adapter path (Default: `./output/Qwen2.5-VL-7B-nutrition/checkpoint-215`)
 
-示例（Windows）:
+Example (Windows):
 ```bash
 set HF_CACHE_DIR=D:/cache/huggingface
 set ADAPTER_PATH=./output/Qwen2.5-VL-7B-nutrition/checkpoint-215
 ```
 
-示例（Linux/Mac）:
+Example (Linux/Mac):
 ```bash
 export HF_CACHE_DIR=~/.cache/huggingface
 export ADAPTER_PATH=./output/Qwen2.5-VL-7B-nutrition/checkpoint-215
 ```
 
-### 模型文件
+### Model Files
 
-确保以下文件/目录存在：
+Ensure the following files/directories exist:
 
-1. **基础模型**: 将从 Hugging Face 自动下载到 `HF_CACHE_DIR/models/Qwen/Qwen2.5-VL-7B-Instruct/`
-2. **LoRA 适配器**: 应位于 `ADAPTER_PATH` 指定的路径
+1. **Base Model**: Will be automatically downloaded from Hugging Face to `HF_CACHE_DIR/models/Qwen/Qwen2.5-VL-7B-Instruct/`
+2. **LoRA Adapter**: Should be located at the path specified by `ADAPTER_PATH`
 
-## 启动服务
+## Running the Service
 
 ```bash
 conda activate image-upload
@@ -52,15 +52,15 @@ cd backend
 python main.py
 ```
 
-服务将在 `http://localhost:8000` 启动。
+The service will start at `http://localhost:8000`.
 
-## API 端点
+## API Endpoints
 
 ### GET /
 
-健康检查端点，返回服务状态。
+Health check endpoint, returns service status.
 
-**响应示例**:
+**Response Example**:
 ```json
 {
   "message": "Nutrition Report Generation API is running",
@@ -72,57 +72,54 @@ python main.py
 
 ### POST /generate
 
-接收图片文件，返回生成的营养报告。
+Receives an image file and returns the generated nutrition report.
 
-**请求**:
+**Request**:
 - Content-Type: `multipart/form-data`
-- Body: `file` (图片文件)
+- Body: `file` (Image file)
 
-**响应**:
+**Response**:
 ```json
 {
-  "text": "生成的营养报告文本...",
-  "report": "生成的营养报告文本...",
+  "text": "Generated nutrition report text...",
+  "report": "Generated nutrition report text...",
   "filename": "image.jpg",
   "status": "success"
 }
 ```
 
-**错误响应**:
-- `400`: 文件不是图片
-- `500`: 处理图片时出错
-- `503`: 模型未加载或推理错误
+**Error Responses**:
+- `400`: File is not an image
+- `500`: Error processing image
+- `503`: Model not loaded or inference error
 
-## 注意事项
+## Notes
 
-1. **首次启动**: 首次运行时会从 Hugging Face 下载模型文件，可能需要较长时间
-2. **内存要求**: 模型需要较大的内存/显存，建议至少 16GB RAM 或 8GB VRAM
-3. **GPU 加速**: 如果系统有 CUDA，会自动使用 GPU 加速
-4. **模型加载**: 模型在服务启动时加载，可能需要几分钟时间
+1. **First Run**: The first run will download model files from Hugging Face, which may take a significant amount of time.
+2. **Memory Requirements**: The model requires substantial RAM/VRAM, recommended at least 16GB RAM or 8GB VRAM.
+3. **GPU Acceleration**: If the system has CUDA, GPU acceleration will be used automatically.
+4. **Model Loading**: The model loads when the service starts, which may take a few minutes.
 
-## 故障排除
+## Troubleshooting
 
-### 模型加载失败
+### Model Load Failure
 
-- 检查 `HF_CACHE_DIR` 路径是否正确
-- 确保有足够的磁盘空间
-- 检查网络连接（需要下载模型）
+- Check if `HF_CACHE_DIR` path is correct.
+- Ensure there is sufficient disk space.
+- Check network connection (required for downloading the model).
 
-### 适配器加载失败
+### Adapter Load Failure
 
-- 检查 `ADAPTER_PATH` 路径是否正确
-- 确保适配器文件完整
+- Check if `ADAPTER_PATH` path is correct.
+- Ensure adapter files are complete.
 
-### CUDA 错误
+### CUDA Errors
 
-- 如果使用 CPU，确保 `device` 设置为 `"cpu"`
-- 检查 PyTorch CUDA 版本是否与系统 CUDA 版本匹配
+- If using CPU, ensure `device` is set to `"cpu"`.
+- Check if PyTorch CUDA version matches the system CUDA version.
 
-### 内存不足
+### Out of Memory
 
-- 减少 `max_new_tokens` 参数
-- 使用 CPU 模式（虽然会较慢）
-- 考虑使用量化模型
-
-
-
+- Reduce the `max_new_tokens` parameter.
+- Use CPU mode (though it will be slower).
+- Consider using a quantized model.
